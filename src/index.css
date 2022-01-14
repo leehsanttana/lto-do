@@ -4,4 +4,19 @@
   box-sizing: border-box;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  --very-peri: #6667ab;
+  --p-white: #f4f4fc;
+  --p-grey: #d5d5e9;
+  --white: #fdfdff;
+  --black: #2b2b2b;
+  --green: #40b113;
+}
+
+body {
+  background: #f4f4fc;
+}
+
+h1,
+p {
+  color: var(--black);
 }

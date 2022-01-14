@@ -4,7 +4,7 @@ import  * as C  from './styles'
 export default function Header () {
   return (
     <C.Header>
-      <h1>teste</h1>
+      <C.Brand> <span>L</span> to.<span>do</span> </C.Brand>
     </C.Header>
   )
 }
