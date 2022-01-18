@@ -15,4 +15,6 @@ export const TopContent = styled.section`
   
 `;
 
-export const Content = styled.section``;
+export const Content = styled.section`
+  margin-top: 2rem;
+`;
