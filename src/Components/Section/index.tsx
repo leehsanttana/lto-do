@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import Input from '../Input';
+import Todo from '../Todo';
 import * as C from './styles'
 
 
-export default function Section() {
+ const Section: React.FC = () => {
   const [todosList, setTodosList] = useState<string[]>([]);
 
   useEffect(() => {
@@ -20,7 +21,7 @@ export default function Section() {
         <ul>
           {
             todosList.map((todo, i) => {
-              return <li key={i}>{todo}</li>
+              return <li key={i}> <Todo todo={todo} /> </li>
             })
           }
         </ul>
@@ -29,3 +30,4 @@ export default function Section() {
   )
 }
 
+export default Section

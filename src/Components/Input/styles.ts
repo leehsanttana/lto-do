@@ -24,12 +24,18 @@ export const Input = styled.div`
     cursor: pointer;
     transition: .1s ease;
 
+
     &:hover{
       filter: brightness(90%);
     }
 
     &:active{
       filter: brightness(80%);
+    }
+
+    &:focus{
+      outline: 1px solid var(--p-grey);
+      outline-offset: 1px;
     }
     
     svg{

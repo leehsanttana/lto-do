@@ -7,13 +7,15 @@ interface InputProps {
   setTodosList: Dispatch<SetStateAction<string[]>>;
 }
 
-export default function Input({todosList, setTodosList}: InputProps) {
+ const Input = ({todosList, setTodosList}: InputProps) => {
 
   const [input, setInput] = useState<string>('');
 
   function handleClick(){
-    setTodosList([...todosList, input]);
-    setInput('');    
+    if(input !== ''){
+      setTodosList([...todosList, input]);
+      setInput('');  
+    }
   }
 
   return (
@@ -26,3 +28,5 @@ export default function Input({todosList, setTodosList}: InputProps) {
 
   )
 };
+
+export default Input;
