@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const Input = styled.div`
 
   display: flex;
+  @media (max-width: 480px){
+      width: 100%;
+  }
 
   input{
     outline: none;
@@ -14,6 +17,10 @@ export const Input = styled.div`
 
     &:focus{
       background: var(--p-grey);
+    }
+
+    @media (max-width: 480px){
+      width: 100%;
     }
   }
   button{

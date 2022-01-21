@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Input from '../Input';
 import Todo from '../Todo';
 import * as C from './styles'
@@ -6,10 +6,6 @@ import * as C from './styles'
 
  const Section: React.FC = () => {
   const [todosList, setTodosList] = useState<string[]>([]);
-
-  useEffect(() => {
-    console.log(todosList);
-  },[todosList]);
 
   return (
     <C.Section>

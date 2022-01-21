@@ -9,35 +9,6 @@ export const Todo = styled.div<TodoProps>`
   justify-content: space-between;
   align-items: center;
 
-  div{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    
-    input[type=checkbox] {
-      accent-color: var(--very-peri);
-      cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
-    }
-
-    input[type=text] {
-      padding: 0.5rem;
-      outline: none;
-      border: 1px solid var(--p-grey);
-      border-radius: 0.3rem;
-      transition: .2s ease-in-out;
-
-      &:focus{
-        background: var(--p-white);
-      }
-    }
-
-    p{
-      padding: 0.5rem;
-      color:  ${(props) => (props.checked ? 'var(--p-grey)' : 'initial')};
-      cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
-    }
-  }
-
   button{
     background: none;
     border: none;
@@ -88,4 +59,44 @@ export const Todo = styled.div<TodoProps>`
     fill:  ${(props) => (props.checked ? 'var(--p-grey)' : 'var(--yellow)')};
     cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
   }
+`;
+
+export const Col1 = styled.div<TodoProps>`
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+
+
+  input[type=checkbox] {
+    accent-color: var(--very-peri);
+    cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
+  }
+
+  input[type=text] {
+    padding: 0.5rem;
+    outline: none;
+    border: 1px solid var(--p-grey);
+    border-radius: 0.3rem;
+    transition: .2s ease-in-out;
+    flex: 1;
+
+    &:focus{
+      background: var(--p-white);
+    }
+  }
+
+  p{
+    padding: 0.5rem;
+    color:  ${(props) => (props.checked ? 'var(--p-grey)' : 'initial')};
+    cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
+
+    @media (max-width: 480px){
+  }
+  }
+`;
+
+export const Col2 = styled.div<TodoProps>`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 `;

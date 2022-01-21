@@ -16,8 +16,8 @@ const Todo = ({todo, todosList, setTodosList, position}: TodoProps) => {
   const [input, setInput] = useState<string>(todo);
   
   
-  function handleChange({target}: React.ChangeEvent<HTMLInputElement>){
-    setChecked(target.checked);
+  function handleChange(){
+    setChecked(!checked);
   }
 
   function openEditTodo(){
@@ -29,7 +29,6 @@ const Todo = ({todo, todosList, setTodosList, position}: TodoProps) => {
       if (i === position) item = input;
       return item;
     }) 
-    console.log(todosListEdit);
     setTodosList(todosListEdit);
     setTodoEdit(!todoEdit);
   }
@@ -39,11 +38,12 @@ const Todo = ({todo, todosList, setTodosList, position}: TodoProps) => {
       if (i !== position) return el;
       return null;
     }));
+    setChecked(false);
   }
 
   return (
     <C.Todo checked={checked}>
-      <div>
+      <C.Col1 checked={checked}>
         <input type="checkbox" checked={checked} onChange={handleChange} disabled={checked} />
         {
         todoEdit ? 
@@ -55,11 +55,11 @@ const Todo = ({todo, todosList, setTodosList, position}: TodoProps) => {
         : <p>{todo}</p> 
         } 
         
-      </div>
-      <div>
+      </C.Col1>
+      <C.Col2 checked={checked}>
         <button onClick={openEditTodo}> <BiHighlight className='yellow'/> </button>
         <button onClick={deleteTodo}> <BiTrash className='red'/> </button>
-      </div>
+      </C.Col2>
     </C.Todo>
   )
 }
