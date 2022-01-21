@@ -13,15 +13,28 @@ export const Todo = styled.div<TodoProps>`
     display: flex;
     gap: 1rem;
     align-items: center;
-    cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
-
+    
     input[type=checkbox] {
       accent-color: var(--very-peri);
       cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
     }
 
+    input[type=text] {
+      padding: 0.5rem;
+      outline: none;
+      border: 1px solid var(--p-grey);
+      border-radius: 0.3rem;
+      transition: .2s ease-in-out;
+
+      &:focus{
+        background: var(--p-white);
+      }
+    }
+
     p{
+      padding: 0.5rem;
       color:  ${(props) => (props.checked ? 'var(--p-grey)' : 'initial')};
+      cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
     }
   }
 
@@ -31,15 +44,39 @@ export const Todo = styled.div<TodoProps>`
     outline: none;
     display: flex;
     align-items: center;
-    cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
-    filter: ${(props) => (props.checked ? 'grayscale(100%)' : 'grayscale(0)')};
+    cursor: pointer;
 
     &:hover{
-      filter: brightness(80%);
+      filter: brightness(90%);
+    }
+
+    &:active{
+      transform: scale(.9);
     }
     
     svg{
-      transform: scale(1.2);
+      transform: scale(1.4);
+    }
+  }
+
+  .btn{
+    border-radius: 50%;
+    padding: 0.2rem;
+    transition: .2s ease-in-out;
+  }
+
+  .greenBtn{
+    background: var(--green);
+    svg {
+      fill: var(--white);
+    }
+  }
+
+  .redBtn{
+    background: none;
+    border: 1px solid var(--red);
+    svg {
+      fill: var(--red);
     }
   }
 
@@ -48,6 +85,7 @@ export const Todo = styled.div<TodoProps>`
   }
 
   .yellow{
-    fill: var(--yellow);
+    fill:  ${(props) => (props.checked ? 'var(--p-grey)' : 'var(--yellow)')};
+    cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
   }
 `;

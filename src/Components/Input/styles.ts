@@ -9,7 +9,7 @@ export const Input = styled.div`
     padding: 0.5rem;
     border: none;
     background: var(--p-white);
-    transition: .1s ease-in-out;
+    transition: .2s ease-in-out;
     border-radius: 0.3rem 0 0 .3rem;
 
     &:focus{
@@ -22,7 +22,7 @@ export const Input = styled.div`
     border: none;
     border-radius: 0 0.3rem 0.3rem 0;
     cursor: pointer;
-    transition: .1s ease;
+    transition: .2s ease;
 
 
     &:hover{

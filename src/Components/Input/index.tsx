@@ -20,7 +20,7 @@ interface InputProps {
 
   return (
     <C.Input>
-      <input type='text' value={input} placeholder='Adicionar novo Todo' onChange={(event) => setInput(event.target.value)} />
+      <input type='text' value={input} placeholder='Adicionar novo Todo' onChange={({target}) => setInput(target.value)} />
       <button onClick={handleClick} >
         <BiCheckDouble /> 
       </button>

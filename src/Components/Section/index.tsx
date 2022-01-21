@@ -9,7 +9,7 @@ import * as C from './styles'
 
   useEffect(() => {
     console.log(todosList);
-  }, [todosList])
+  },[todosList]);
 
   return (
     <C.Section>
@@ -21,7 +21,7 @@ import * as C from './styles'
         <ul>
           {
             todosList.map((todo, i) => {
-              return <li key={i}> <Todo todo={todo} todosList={todosList} setTodosList={setTodosList}  /> </li>
+              return <li key={i}> <Todo todo={todo} position={i} todosList={todosList} setTodosList={setTodosList}  /> </li>
             })
           }
         </ul>
