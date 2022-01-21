@@ -10,6 +10,8 @@
   --white: #fdfdff;
   --black: #2b2b2b;
   --green: #40b113;
+  --red: #c72712;
+  --yellow: #c77f12;
 }
 
 body {
@@ -19,4 +21,5 @@ body {
 h1,
 p {
   color: var(--black);
+  letter-spacing: 0.02rem;
 }

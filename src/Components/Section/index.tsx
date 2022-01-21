@@ -21,7 +21,7 @@ import * as C from './styles'
         <ul>
           {
             todosList.map((todo, i) => {
-              return <li key={i}> <Todo todo={todo} /> </li>
+              return <li key={i}> <Todo todo={todo} todosList={todosList} setTodosList={setTodosList}  /> </li>
             })
           }
         </ul>
