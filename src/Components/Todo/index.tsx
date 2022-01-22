@@ -44,7 +44,7 @@ const Todo = ({todo, todosList, setTodosList, position}: TodoProps) => {
   return (
     <C.Todo checked={checked}>
       <C.Col1 checked={checked} edit={todoEdit}>
-        <input type="checkbox" checked={checked} onChange={handleChange} disabled={checked} />
+        <input type="checkbox" checked={checked} onChange={handleChange} />
         {
         todoEdit ? 
         <div>
