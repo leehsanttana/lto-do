@@ -104,9 +104,7 @@ export const Col1 = styled.div<Col1Props>`
     padding: 0.5rem;
     color:  ${(props) => (props.checked ? 'var(--p-grey)' : 'initial')};
     cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
-
-    @media (max-width: 480px){
-  }
+    text-decoration: ${(props) => (props.checked ? 'line-through' : 'none')};
   }
 `;
 
