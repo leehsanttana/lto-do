@@ -57,7 +57,7 @@ const Todo = ({todo, todosList, setTodosList, position}: TodoProps) => {
         
       </C.Col1>
       <C.Col2 checked={checked}>
-        <button onClick={openEditTodo}> <BiHighlight className='yellow'/> </button>
+        <button onClick={openEditTodo}> <BiHighlight className='yellow' disabled={checked} /> </button>
         <button onClick={deleteTodo}> <BiTrash className='red'/> </button>
       </C.Col2>
     </C.Todo>
