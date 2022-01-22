@@ -29,7 +29,7 @@ const Todo = ({todo, todosList, setTodosList, position}: TodoProps) => {
       if (i === position) item = input;
       return item;
     }) 
-    setTodosList(todosListEdit);
+    setTodosList(todosListEdit);  
     setTodoEdit(!todoEdit);
   }
 
@@ -43,7 +43,7 @@ const Todo = ({todo, todosList, setTodosList, position}: TodoProps) => {
 
   return (
     <C.Todo checked={checked}>
-      <C.Col1 checked={checked}>
+      <C.Col1 checked={checked} edit={todoEdit}>
         <input type="checkbox" checked={checked} onChange={handleChange} disabled={checked} />
         {
         todoEdit ? 

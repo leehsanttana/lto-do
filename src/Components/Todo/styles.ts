@@ -4,6 +4,10 @@ interface TodoProps {
   checked: boolean;
 }
 
+interface Col1Props extends TodoProps{
+  edit: boolean;
+}
+
 export const Todo = styled.div<TodoProps>`
   display: flex;
   justify-content: space-between;
@@ -61,15 +65,22 @@ export const Todo = styled.div<TodoProps>`
   }
 `;
 
-export const Col1 = styled.div<TodoProps>`
+export const Col1 = styled.div<Col1Props>`
   display: flex;
   gap: .5rem;
   align-items: center;
 
+  div{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
 
   input[type=checkbox] {
-    accent-color: var(--very-peri);
+ 
     cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
+    display: ${(props) => (props.edit ? 'none' : 'block')};
   }
 
   input[type=text] {
