@@ -79,6 +79,7 @@ export const Col1 = styled.div<Col1Props>`
 
 
   input[type=checkbox] {
+    accent-color: var(--very-peri);
     cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
     display: ${(props) => (props.edit ? 'none' : 'block')};
   }
