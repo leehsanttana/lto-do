@@ -12,6 +12,7 @@ export const Todo = styled.div<TodoProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: .5rem;
 
   button{
     background: none;
@@ -78,12 +79,12 @@ export const Col1 = styled.div<Col1Props>`
 
 
   input[type=checkbox] {
- 
     cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
     display: ${(props) => (props.edit ? 'none' : 'block')};
   }
 
   input[type=text] {
+    width: 140px;
     padding: 0.5rem;
     outline: none;
     border: 1px solid var(--p-grey);
@@ -94,6 +95,8 @@ export const Col1 = styled.div<Col1Props>`
     &:focus{
       background: var(--p-white);
     }
+
+    
   }
 
   p{
