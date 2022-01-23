@@ -44,7 +44,7 @@ export const Todo = styled.div<TodoProps>`
   .greenBtn{
     background: var(--green);
     svg {
-      fill: var(--white);
+      fill: ${props => props.theme.colors.secundary};
     }
   }
 
@@ -61,8 +61,8 @@ export const Todo = styled.div<TodoProps>`
   }
 
   .yellow{
-    fill:  ${(props) => (props.checked ? 'var(--p-grey)' : 'var(--yellow)')};
-    cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
+    fill:  ${props => (props.checked ? props.theme.colors.tertiary : 'var(--yellow)')};
+    cursor: ${props => (props.checked ? 'not-allowed' : 'pointer')};
   }
 `;
 
@@ -79,16 +79,16 @@ export const Col1 = styled.div<Col1Props>`
 
 
   input[type=checkbox] {
-    accent-color: var(--very-peri);
     cursor: pointer;
-    display: ${(props) => (props.edit ? 'none' : 'block')};
+    display: ${props => (props.edit ? 'none' : 'block')};
+    accent-color: ${props => props.theme.colors.primary};
   }
 
   input[type=text] {
     width: 140px;
     padding: 0.5rem;
     outline: none;
-    border: 1px solid var(--p-grey);
+    border: 1px solid ${props => props.theme.colors.tertiary};
     border-radius: 0.3rem;
     transition: .2s ease-in-out;
     flex: 1;
@@ -102,9 +102,11 @@ export const Col1 = styled.div<Col1Props>`
 
   p{
     padding: 0.5rem;
-    color:  ${(props) => (props.checked ? 'var(--p-grey)' : 'initial')};
-    cursor: ${(props) => (props.checked ? 'not-allowed' : 'pointer')};
-    text-decoration: ${(props) => (props.checked ? 'line-through' : 'none')};
+    color:  ${props => (props.checked ? props.theme.colors.tertiary : props.theme.colors.text)};
+    text-decoration: ${props => (props.checked ? 'line-through' : 'none')};
+
+    @media (max-width: 480px){
+  }
   }
 `;
 

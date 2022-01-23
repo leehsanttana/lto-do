@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-  background-color: var(--very-peri);
+  background-color: ${props => props.theme.colors.primary};
   height: 20vh;
   display: flex;
   justify-content: center;
@@ -13,7 +13,7 @@ export const Brand = styled.span`
   display: flex;
   align-items: center;
   font-size: 1.4rem;
-  color: var(--p-white);
+  color: ${props => props.theme.colors.background};
 
   & span:first-child{
     display: inline-block;

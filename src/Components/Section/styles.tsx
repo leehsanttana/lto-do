@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.main`
-  background: var(--white);
+  background: ${props => props.theme.colors.secundary};
   padding: 2rem;
   margin: -2rem 14rem 0;
   border-radius: .7rem;
@@ -59,7 +59,7 @@ export const Content = styled.section`
           }
         }
       & + li {
-        border-top: 1px solid var(--p-grey);
+        border-top: 1px solid ${props => props.theme.colors.tertiary};
         margin-top: 1.5rem;
         padding-top: 1.5rem;
       }
