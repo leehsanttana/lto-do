@@ -7,19 +7,23 @@ export default createGlobalStyle`
     box-sizing: border-box;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    --green: #40b113;
-    --red: #c72712;
-    --yellow: #c77f12;
+    --green: #47C315;
+    --red: #EF2308;
+    --yellow: #EBCA0F;
+    --white: #fdfdff;
     }
 
     body {
     background: ${props => props.theme.colors.background};
+    transition: .2s linear;
+
     }
 
     h1,
     p {
-    color: var(--black);
+    color: ${props => props.theme.colors.text};
     letter-spacing: 0.02rem;
+    transition: .2s ease;
     }
 
 `
